@@ -1,5 +1,5 @@
 // Copyright 2021, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -9,8 +9,8 @@
 package remux
 
 import (
-	"github.com/q191201771/lal/pkg/base"
-	"github.com/q191201771/lal/pkg/mpegts"
+	"github.com/forkiss/lal/pkg/base"
+	"github.com/forkiss/lal/pkg/mpegts"
 )
 
 // rtmp2MpegtsFilter

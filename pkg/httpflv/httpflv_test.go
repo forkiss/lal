@@ -1,5 +1,5 @@
 // Copyright 2020, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -13,12 +13,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/q191201771/lal/pkg/httpflv"
+	"github.com/forkiss/lal/pkg/httpflv"
 	"github.com/q191201771/naza/pkg/assert"
 	"github.com/q191201771/naza/pkg/mock"
 	"github.com/q191201771/naza/pkg/nazamd5"
 
-	"github.com/q191201771/lal/pkg/innertest"
+	"github.com/forkiss/lal/pkg/innertest"
 )
 
 func TestHttpflv(t *testing.T) {

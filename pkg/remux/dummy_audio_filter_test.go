@@ -1,5 +1,5 @@
 // Copyright 2021, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -14,8 +14,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/q191201771/lal/pkg/base"
-	"github.com/q191201771/lal/pkg/remux"
+	"github.com/forkiss/lal/pkg/base"
+	"github.com/forkiss/lal/pkg/remux"
 	"github.com/q191201771/naza/pkg/assert"
 )
 
@@ -131,7 +131,7 @@ func helperUnpackRtmpMsg(logstr string) base.RtmpMsg {
 	remux.Log.Assert(nil, err)
 
 	return base.RtmpMsg{
-		Header:  header,
+		Header: header,
 		Payload: payload,
 	}
 }

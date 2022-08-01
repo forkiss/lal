@@ -1,5 +1,5 @@
 // Copyright 2019, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -11,7 +11,7 @@ package httpflv
 import (
 	"os"
 
-	"github.com/q191201771/lal/pkg/base"
+	"github.com/forkiss/lal/pkg/base"
 )
 
 // TODO chef: 结构体重命名为FileWriter，文件名重命名为file_writer.go。所有写流文件的（flv,hls,ts）统一重构

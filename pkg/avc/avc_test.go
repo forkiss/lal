@@ -1,5 +1,5 @@
 // Copyright 2019, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -16,12 +16,12 @@ import (
 
 	"github.com/q191201771/naza/pkg/nazalog"
 
-	"github.com/q191201771/lal/pkg/base"
+	"github.com/forkiss/lal/pkg/base"
 
 	"github.com/q191201771/naza/pkg/nazabits"
 	"github.com/q191201771/naza/pkg/nazaerrors"
 
-	"github.com/q191201771/lal/pkg/avc"
+	"github.com/forkiss/lal/pkg/avc"
 
 	"github.com/q191201771/naza/pkg/assert"
 )
@@ -321,7 +321,7 @@ func TestIterateNaluAvcc(t *testing.T) {
 
 func TestIssue135(t *testing.T) {
 	//
-	// https://github.com/q191201771/lal/issues/135
+	// https://github.com/forkiss/lal/issues/135
 	//
 	// TRACE [0xc0000ff0b0] RTMP_READ cb. fmt=0, csid=6, header={Csid:6 MsgLen:77 MsgTypeId:9 MsgStreamId:1 TimestampAbs:0}, timestamp=0,
 	// hex=00000000  17 00 00 00 00 01 4d 40  1f ff e2 00 18 67 4d 40  |......M@.....gM@|
@@ -347,7 +347,7 @@ func TestIssue135(t *testing.T) {
 }
 
 func TestTryParseSeqHeader(t *testing.T) {
-	// https://github.com/q191201771/lal/issues/143
+	// https://github.com/forkiss/lal/issues/143
 	payload, err := hex.DecodeString("17000000000142000affe1000a6742000af80f0044be0801000568ce388000")
 	// "6742000af80f0044be08 68ce388000"
 	assert.Equal(t, nil, err)

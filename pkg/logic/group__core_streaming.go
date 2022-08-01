@@ -1,5 +1,5 @@
 // Copyright 2022, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -9,18 +9,19 @@
 package logic
 
 import (
-	"github.com/q191201771/lal/pkg/rtmp"
-	"github.com/q191201771/naza/pkg/nazalog"
 	"net"
 
-	"github.com/q191201771/lal/pkg/mpegts"
+	"github.com/forkiss/lal/pkg/rtmp"
+	"github.com/q191201771/naza/pkg/nazalog"
 
-	"github.com/q191201771/lal/pkg/avc"
-	"github.com/q191201771/lal/pkg/base"
-	"github.com/q191201771/lal/pkg/hevc"
-	"github.com/q191201771/lal/pkg/remux"
-	"github.com/q191201771/lal/pkg/rtprtcp"
-	"github.com/q191201771/lal/pkg/sdp"
+	"github.com/forkiss/lal/pkg/mpegts"
+
+	"github.com/forkiss/lal/pkg/avc"
+	"github.com/forkiss/lal/pkg/base"
+	"github.com/forkiss/lal/pkg/hevc"
+	"github.com/forkiss/lal/pkg/remux"
+	"github.com/forkiss/lal/pkg/rtprtcp"
+	"github.com/forkiss/lal/pkg/sdp"
 )
 
 // group__streaming.go
@@ -83,7 +84,7 @@ func (group *Group) OnAvPacket(pkt base.AvPacket) {
 // OnPatPmt OnTsPackets
 //
 // 输入mpegts数据.
-// 来自 remux.Rtmp2MpegtsRemuxer 的回调.
+// 来自 remux.Rtmp2MPEGtsRemuxer 的回调.
 //
 func (group *Group) OnPatPmt(b []byte) {
 	group.patpmt = b

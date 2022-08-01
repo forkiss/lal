@@ -1,5 +1,5 @@
 // Copyright 2021, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -9,14 +9,14 @@
 package innertest
 
 import (
-	"github.com/q191201771/lal/pkg/base"
-	"github.com/q191201771/lal/pkg/hls"
-	"github.com/q191201771/lal/pkg/httpflv"
-	"github.com/q191201771/lal/pkg/httpts"
-	"github.com/q191201771/lal/pkg/logic"
-	"github.com/q191201771/lal/pkg/remux"
-	"github.com/q191201771/lal/pkg/rtmp"
-	"github.com/q191201771/lal/pkg/rtsp"
+	"github.com/forkiss/lal/pkg/base"
+	"github.com/forkiss/lal/pkg/hls"
+	"github.com/forkiss/lal/pkg/httpflv"
+	"github.com/forkiss/lal/pkg/httpts"
+	"github.com/forkiss/lal/pkg/logic"
+	"github.com/forkiss/lal/pkg/remux"
+	"github.com/forkiss/lal/pkg/rtmp"
+	"github.com/forkiss/lal/pkg/rtsp"
 	"github.com/q191201771/naza/pkg/connection"
 )
 

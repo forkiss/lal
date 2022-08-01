@@ -1,5 +1,5 @@
 // Copyright 2020, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -10,11 +10,11 @@ package sdp
 
 import (
 	"encoding/hex"
-	"github.com/q191201771/lal/pkg/avc"
+	"github.com/forkiss/lal/pkg/avc"
 	"strings"
 	"testing"
 
-	"github.com/q191201771/lal/pkg/base"
+	"github.com/forkiss/lal/pkg/base"
 
 	"github.com/q191201771/naza/pkg/assert"
 )

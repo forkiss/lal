@@ -37,7 +37,7 @@ done
 for name in ${NAMES[@]};
 do
   echo ${v} >> ${ROOT_DIR}/${OUT_DIR}/${prefix}${name}/README.txt
-  echo 'github: https://github.com/q191201771/lal ' >> ${ROOT_DIR}/${OUT_DIR}/${prefix}${name}/README.txt
+  echo 'github: https://github.com/forkiss/lal ' >> ${ROOT_DIR}/${OUT_DIR}/${prefix}${name}/README.txt
   echo 'doc: https://pengrl.com/lal ' >> ${ROOT_DIR}/${OUT_DIR}/${prefix}${name}/README.txt
 done
 

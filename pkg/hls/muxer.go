@@ -1,5 +1,5 @@
 // Copyright 2020, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -14,9 +14,9 @@ import (
 
 	"github.com/q191201771/naza/pkg/nazaerrors"
 
-	"github.com/q191201771/lal/pkg/mpegts"
+	"github.com/forkiss/lal/pkg/mpegts"
 
-	"github.com/q191201771/lal/pkg/base"
+	"github.com/forkiss/lal/pkg/base"
 )
 
 type IMuxerObserver interface {
@@ -142,8 +142,8 @@ func (m *Muxer) OnPatPmt(b []byte) {
 	m.FeedPatPmt(b)
 }
 
-func (m *Muxer) OnTsPackets(tsPackets []byte, frame *mpegts.Frame, boundary bool) {
-	m.FeedMpegts(tsPackets, frame, boundary)
+func (m *Muxer) OnTsPackets(packets []byte, frame *mpegts.Frame, boundary bool) {
+	m.FeedMPEGts(packets, frame, boundary)
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -152,7 +152,7 @@ func (m *Muxer) FeedPatPmt(b []byte) {
 	m.patpmt = b
 }
 
-func (m *Muxer) FeedMpegts(tsPackets []byte, frame *mpegts.Frame, boundary bool) {
+func (m *Muxer) FeedMPEGts(packets []byte, frame *mpegts.Frame, boundary bool) {
 	if frame.Sid == mpegts.StreamIdAudio {
 		// TODO(chef): 为什么音频用pts，视频用dts
 		if err := m.updateFragment(frame.Pts, boundary); err != nil {
@@ -161,7 +161,7 @@ func (m *Muxer) FeedMpegts(tsPackets []byte, frame *mpegts.Frame, boundary bool)
 		}
 		// TODO(chef): 有updateFragment的返回值判断，这里的判断可以考虑删除
 		if !m.opened {
-			Log.Warnf("[%s] FeedMpegts A not opened. boundary=%t", m.UniqueKey, boundary)
+			Log.Warnf("[%s] FeedMPEGts A not opened. boundary=%t", m.UniqueKey, boundary)
 			return
 		}
 		//Log.Debugf("[%s] WriteFrame A. dts=%d, len=%d", m.UniqueKey, frame.DTS, len(frame.Raw))
@@ -172,13 +172,13 @@ func (m *Muxer) FeedMpegts(tsPackets []byte, frame *mpegts.Frame, boundary bool)
 		}
 		// TODO(chef): 有updateFragment的返回值判断，这里的判断可以考虑删除
 		if !m.opened {
-			Log.Warnf("[%s] FeedMpegts V not opened. boundary=%t, key=%t", m.UniqueKey, boundary, frame.Key)
+			Log.Warnf("[%s] FeedMPEGts V not opened. boundary=%t, key=%t", m.UniqueKey, boundary, frame.Key)
 			return
 		}
 		//Log.Debugf("[%s] WriteFrame V. dts=%d, len=%d", m.UniqueKey, frame.Dts, len(frame.Raw))
 	}
 
-	if err := m.fragment.WriteFile(tsPackets); err != nil {
+	if err := m.fragment.WriteFile(packets); err != nil {
 		Log.Errorf("[%s] fragment write error. err=%+v", m.UniqueKey, err)
 		return
 	}

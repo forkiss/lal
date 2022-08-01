@@ -1,5 +1,5 @@
 // Copyright 2019, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/q191201771/lal/pkg/base"
+	"github.com/forkiss/lal/pkg/base"
 
 	"github.com/q191201771/naza/pkg/bele"
 	"github.com/q191201771/naza/pkg/connection"
@@ -628,7 +628,7 @@ func (s *ClientSession) doProtocolControlMessage(stream *Stream) error {
 }
 
 func (s *ClientSession) doRespAcknowledgement(stream *Stream) error {
-	// https://github.com/q191201771/lal/pull/154
+	// https://github.com/forkiss/lal/pull/154
 	if s.option.PeerWinAckSize <= 0 {
 		return nil
 	}

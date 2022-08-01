@@ -1,5 +1,5 @@
 // Copyright 2022, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/q191201771/lal/pkg/httpflv"
+	"github.com/forkiss/lal/pkg/httpflv"
 )
 
 // startRecordFlvIfNeeded 必要时开启flv录制

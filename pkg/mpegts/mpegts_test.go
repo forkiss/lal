@@ -1,5 +1,5 @@
 // Copyright 2020, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -11,9 +11,9 @@ package mpegts_test
 import (
 	"testing"
 
-	"github.com/q191201771/lal/pkg/innertest"
+	"github.com/forkiss/lal/pkg/innertest"
 
-	"github.com/q191201771/lal/pkg/mpegts"
+	"github.com/forkiss/lal/pkg/mpegts"
 )
 
 func TestMpegts(t *testing.T) {

@@ -1,5 +1,5 @@
 // Copyright 2020, Chef.  All rights reserved.
-// https://github.com/q191201771/lal
+// https://github.com/forkiss/lal
 //
 // Use of this source code is governed by a MIT-style license
 // that can be found in the License file.
@@ -10,11 +10,12 @@ package remux
 
 import (
 	"encoding/hex"
-	"github.com/q191201771/lal/pkg/aac"
-	"github.com/q191201771/lal/pkg/avc"
-	"github.com/q191201771/lal/pkg/base"
-	"github.com/q191201771/lal/pkg/hevc"
-	"github.com/q191201771/lal/pkg/mpegts"
+
+	"github.com/forkiss/lal/pkg/aac"
+	"github.com/forkiss/lal/pkg/avc"
+	"github.com/forkiss/lal/pkg/base"
+	"github.com/forkiss/lal/pkg/hevc"
+	"github.com/forkiss/lal/pkg/mpegts"
 	"github.com/q191201771/naza/pkg/bele"
 	"github.com/q191201771/naza/pkg/nazabytes"
 )
@@ -37,7 +38,7 @@ type IRtmp2MpegtsRemuxerObserver interface {
 	//
 	// @param tsPackets:
 	//  - mpegts数据，有一个或多个188字节的ts数据组成
-	//  - 回调结束后，remux.Rtmp2MpegtsRemuxer 不再使用这块内存块
+	//  - 回调结束后，remux.Rtmp2MPEGtsRemuxer 不再使用这块内存块
 	//
 	// @param frame: 各字段含义见 mpegts.Frame 结构体定义
 	//
@@ -48,9 +49,9 @@ type IRtmp2MpegtsRemuxerObserver interface {
 	OnTsPackets(tsPackets []byte, frame *mpegts.Frame, boundary bool)
 }
 
-// Rtmp2MpegtsRemuxer 输入rtmp流，输出mpegts流
+// Rtmp2MPEGtsRemuxer 输入rtmp流，输出mpegts流
 //
-type Rtmp2MpegtsRemuxer struct {
+type Rtmp2MPEGtsRemuxer struct {
 	UniqueKey string
 
 	observer IRtmp2MpegtsRemuxerObserver
@@ -101,9 +102,9 @@ type Rtmp2MpegtsRemuxer struct {
 	opened bool
 }
 
-func NewRtmp2MpegtsRemuxer(observer IRtmp2MpegtsRemuxerObserver) *Rtmp2MpegtsRemuxer {
+func NewRtmp2MpegtsRemuxer(observer IRtmp2MpegtsRemuxerObserver) *Rtmp2MPEGtsRemuxer {
 	uk := base.GenUkRtmp2MpegtsRemuxer()
-	r := &Rtmp2MpegtsRemuxer{
+	r := &Rtmp2MPEGtsRemuxer{
 		UniqueKey: uk,
 		observer:  observer,
 	}
@@ -118,11 +119,11 @@ func NewRtmp2MpegtsRemuxer(observer IRtmp2MpegtsRemuxerObserver) *Rtmp2MpegtsRem
 //
 // @param msg: msg.Payload 调用结束后，函数内部不会持有这块内存
 //
-func (s *Rtmp2MpegtsRemuxer) FeedRtmpMessage(msg base.RtmpMsg) {
+func (s *Rtmp2MPEGtsRemuxer) FeedRtmpMessage(msg base.RtmpMsg) {
 	s.filter.Push(msg)
 }
 
-func (s *Rtmp2MpegtsRemuxer) Dispose() {
+func (s *Rtmp2MPEGtsRemuxer) Dispose() {
 	s.FlushAudio()
 }
 
@@ -135,7 +136,7 @@ func (s *Rtmp2MpegtsRemuxer) Dispose() {
 // 2. 打开一个新的TS文件切片时
 // 3. 输入流关闭时
 //
-func (s *Rtmp2MpegtsRemuxer) FlushAudio() {
+func (s *Rtmp2MPEGtsRemuxer) FlushAudio() {
 	if s.audioCacheEmpty() {
 		return
 	}
@@ -163,11 +164,11 @@ func (s *Rtmp2MpegtsRemuxer) FlushAudio() {
 //
 // 实现 iRtmp2MpegtsFilterObserver
 //
-func (s *Rtmp2MpegtsRemuxer) onPatPmt(b []byte) {
+func (s *Rtmp2MPEGtsRemuxer) onPatPmt(b []byte) {
 	s.observer.OnPatPmt(b)
 }
 
-func (s *Rtmp2MpegtsRemuxer) onPop(msg base.RtmpMsg) {
+func (s *Rtmp2MPEGtsRemuxer) onPop(msg base.RtmpMsg) {
 	switch msg.Header.MsgTypeId {
 	case base.RtmpTypeIdAudio:
 		s.feedAudio(msg)
@@ -178,7 +179,7 @@ func (s *Rtmp2MpegtsRemuxer) onPop(msg base.RtmpMsg) {
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-func (s *Rtmp2MpegtsRemuxer) feedVideo(msg base.RtmpMsg) {
+func (s *Rtmp2MPEGtsRemuxer) feedVideo(msg base.RtmpMsg) {
 	if len(msg.Payload) <= 5 {
 		Log.Warnf("[%s] rtmp msg too short, ignore. header=%+v, payload=%s", s.UniqueKey, msg.Header, hex.Dump(msg.Payload))
 		return
@@ -236,7 +237,7 @@ func (s *Rtmp2MpegtsRemuxer) feedVideo(msg base.RtmpMsg) {
 		//
 		// sps pps
 		// 注意，有的流，seq header中的sps和pps是错误的，需要从nals里获取sps pps并更新
-		// 见 https://github.com/q191201771/lal/issues/143
+		// 见 https://github.com/forkiss/lal/issues/143
 		//
 		// TODO(chef): rtmp转其他类型的模块也存在这个问题，应该抽象出一个统一处理的地方
 		//
@@ -356,7 +357,7 @@ func (s *Rtmp2MpegtsRemuxer) feedVideo(msg base.RtmpMsg) {
 	s.videoCc = frame.Cc
 }
 
-func (s *Rtmp2MpegtsRemuxer) feedAudio(msg base.RtmpMsg) {
+func (s *Rtmp2MPEGtsRemuxer) feedAudio(msg base.RtmpMsg) {
 	if len(msg.Payload) <= 2 {
 		Log.Warnf("[%s] rtmp msg too short, ignore. header=%+v, payload=%s", s.UniqueKey, msg.Header, hex.Dump(msg.Payload))
 		return
@@ -394,17 +395,17 @@ func (s *Rtmp2MpegtsRemuxer) feedAudio(msg base.RtmpMsg) {
 	s.audioCacheFrames = append(s.audioCacheFrames, msg.Payload[2:]...)
 }
 
-func (s *Rtmp2MpegtsRemuxer) cacheAacSeqHeader(msg base.RtmpMsg) error {
+func (s *Rtmp2MPEGtsRemuxer) cacheAacSeqHeader(msg base.RtmpMsg) error {
 	var err error
 	s.ascCtx, err = aac.NewAscContext(msg.Payload[2:])
 	return err
 }
 
-func (s *Rtmp2MpegtsRemuxer) audioSeqHeaderCached() bool {
+func (s *Rtmp2MPEGtsRemuxer) audioSeqHeaderCached() bool {
 	return s.ascCtx != nil
 }
 
-func (s *Rtmp2MpegtsRemuxer) appendSpsPps(out []byte) ([]byte, error) {
+func (s *Rtmp2MPEGtsRemuxer) appendSpsPps(out []byte) ([]byte, error) {
 	if s.spspps == nil {
 		return out, base.ErrHls
 	}
@@ -413,23 +414,23 @@ func (s *Rtmp2MpegtsRemuxer) appendSpsPps(out []byte) ([]byte, error) {
 	return out, nil
 }
 
-func (s *Rtmp2MpegtsRemuxer) videoSeqHeaderCached() bool {
+func (s *Rtmp2MPEGtsRemuxer) videoSeqHeaderCached() bool {
 	return len(s.spspps) != 0
 }
 
-func (s *Rtmp2MpegtsRemuxer) audioCacheEmpty() bool {
+func (s *Rtmp2MPEGtsRemuxer) audioCacheEmpty() bool {
 	return len(s.audioCacheFrames) == 0
 }
 
-func (s *Rtmp2MpegtsRemuxer) resetAudioCache() {
+func (s *Rtmp2MPEGtsRemuxer) resetAudioCache() {
 	s.audioCacheFrames = s.audioCacheFrames[0:0]
 }
 
-func (s *Rtmp2MpegtsRemuxer) resetVideoOutBuffer() {
+func (s *Rtmp2MPEGtsRemuxer) resetVideoOutBuffer() {
 	s.videoOut = s.videoOut[0:0]
 }
 
-func (s *Rtmp2MpegtsRemuxer) onFrame(frame *mpegts.Frame) {
+func (s *Rtmp2MPEGtsRemuxer) onFrame(frame *mpegts.Frame) {
 	var boundary bool
 
 	if frame.Sid == mpegts.StreamIdAudio {
