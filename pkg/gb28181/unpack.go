@@ -15,10 +15,10 @@ import (
 	"github.com/forkiss/lal/pkg/h2645"
 	"github.com/forkiss/lal/pkg/rtprtcp"
 
-	"github.com/q191201771/naza/pkg/bele"
-	"github.com/q191201771/naza/pkg/nazabits"
-	"github.com/q191201771/naza/pkg/nazabytes"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/nazabits"
+	"github.com/forkiss/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 // PsUnpacker 解析ps(Program Stream)流

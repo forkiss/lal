@@ -13,7 +13,7 @@ import (
 	"encoding/base64"
 	"math"
 
-	"github.com/q191201771/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/bele"
 )
 
 // WsOpcode The WebSocket Protocol

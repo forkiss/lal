@@ -10,7 +10,7 @@ package logic
 
 import (
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/bininfo"
+	"github.com/forkiss/naza/pkg/bininfo"
 	"math"
 )
 

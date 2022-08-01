@@ -12,7 +12,7 @@ package rtmp
 
 import (
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/bele"
 )
 
 type ChunkDivider struct {

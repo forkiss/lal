@@ -16,7 +16,7 @@ import (
 	"github.com/forkiss/lal/pkg/rtmp"
 	"github.com/forkiss/lal/pkg/rtprtcp"
 	"github.com/forkiss/lal/pkg/sdp"
-	"github.com/q191201771/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/bele"
 )
 
 // AvPacket2RtmpRemuxer AvPacket转换为RTMP

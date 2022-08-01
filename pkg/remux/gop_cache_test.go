@@ -13,7 +13,7 @@ import (
 
 	"github.com/forkiss/lal/pkg/base"
 
-	"github.com/q191201771/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/assert"
 )
 
 func TestGopCache_Feed(t *testing.T) {

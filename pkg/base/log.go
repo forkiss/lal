@@ -11,7 +11,7 @@ package base
 import (
 	"fmt"
 
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 type LogDump struct {

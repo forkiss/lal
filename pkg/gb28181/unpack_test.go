@@ -11,14 +11,14 @@ package gb28181
 import (
 	"encoding/hex"
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/nazamd5"
+	"github.com/forkiss/naza/pkg/nazamd5"
 	"io/ioutil"
 	"os"
 	"testing"
 
 	"github.com/forkiss/lal/pkg/avc"
-	"github.com/q191201771/naza/pkg/nazabytes"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 var goldenRtpList = []string{

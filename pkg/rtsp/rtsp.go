@@ -14,12 +14,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 
 	"github.com/forkiss/lal/pkg/base"
 
 	"github.com/forkiss/lal/pkg/rtprtcp"
-	"github.com/q191201771/naza/pkg/nazanet"
+	"github.com/forkiss/naza/pkg/nazanet"
 )
 
 // TODO chef

@@ -16,7 +16,7 @@ import (
 	"github.com/forkiss/lal/pkg/base"
 
 	"github.com/forkiss/lal/pkg/httpflv"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 // 修改flv文件的一些信息（比如某些tag的时间戳）后另存文件

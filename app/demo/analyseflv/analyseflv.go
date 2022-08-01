@@ -17,7 +17,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/q191201771/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/nazabytes"
 
 	"github.com/forkiss/lal/pkg/base"
 
@@ -25,11 +25,11 @@ import (
 
 	"github.com/forkiss/lal/pkg/avc"
 	"github.com/forkiss/lal/pkg/hevc"
-	"github.com/q191201771/naza/pkg/bele"
-	"github.com/q191201771/naza/pkg/bitrate"
+	"github.com/forkiss/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/bitrate"
 
 	"github.com/forkiss/lal/pkg/httpflv"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 // 分析诊断HTTP-FLV流的时间戳。注意，这个程序还没有完成。

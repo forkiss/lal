@@ -47,7 +47,7 @@ type Group struct {
 	customizePubSession *CustomizePubSessionContext
 	rtsp2RtmpRemuxer    *remux.AvPacket2RtmpRemuxer
 	rtmp2RtspRemuxer    *remux.Rtmp2RtspRemuxer
-	rtmp2MpegtsRemuxer  *remux.Rtmp2MpegtsRemuxer
+	rtmp2MpegtsRemuxer  *remux.Rtmp2MPEGtsRemuxer
 	// pull
 	pullProxy *pullProxy
 	// rtmp pub使用

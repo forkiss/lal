@@ -14,16 +14,16 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 
 	"github.com/forkiss/lal/pkg/base"
 
-	"github.com/q191201771/naza/pkg/nazabits"
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazabits"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 
 	"github.com/forkiss/lal/pkg/avc"
 
-	"github.com/q191201771/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/assert"
 )
 
 func TestParseNaluType(t *testing.T) {

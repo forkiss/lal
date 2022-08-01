@@ -19,7 +19,7 @@ import (
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/hls"
 	"github.com/forkiss/lal/pkg/rtmp"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 func main() {

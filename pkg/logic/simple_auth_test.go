@@ -12,7 +12,7 @@ import (
 	"testing"
 
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/assert"
 )
 
 func TestSimpleAuthCalcSecret(t *testing.T) {

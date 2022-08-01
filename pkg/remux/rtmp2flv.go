@@ -12,7 +12,7 @@ import (
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/httpflv"
 	"github.com/forkiss/lal/pkg/rtmp"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 // RtmpMsg2FlvTag @return 返回的内存块为新申请的独立内存块

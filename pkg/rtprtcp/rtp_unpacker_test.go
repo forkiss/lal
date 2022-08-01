@@ -12,10 +12,10 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/q191201771/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/bele"
 
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/assert"
 )
 
 // #85

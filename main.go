@@ -15,8 +15,8 @@ import (
 
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/logic"
-	"github.com/q191201771/naza/pkg/bininfo"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/bininfo"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 func main() {

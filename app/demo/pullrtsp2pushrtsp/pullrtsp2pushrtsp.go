@@ -15,15 +15,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/q191201771/naza/pkg/nazaerrors"
-	"github.com/q191201771/naza/pkg/unique"
+	"github.com/forkiss/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/unique"
 
 	"github.com/forkiss/lal/pkg/sdp"
 
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/rtprtcp"
 	"github.com/forkiss/lal/pkg/rtsp"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 type RtspTunnel struct {

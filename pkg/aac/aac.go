@@ -10,13 +10,13 @@ package aac
 
 import (
 	"fmt"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 
 	"github.com/forkiss/lal/pkg/base"
 
-	"github.com/q191201771/naza/pkg/nazabits"
+	"github.com/forkiss/naza/pkg/nazabits"
 )
 
 // AudioSpecificConfig(asc)

@@ -18,7 +18,7 @@ import (
 
 	"github.com/forkiss/lal/pkg/base"
 
-	"github.com/q191201771/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/bele"
 )
 
 // https://pengrl.com/p/20027

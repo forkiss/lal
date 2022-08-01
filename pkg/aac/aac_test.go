@@ -16,7 +16,7 @@ import (
 
 	"github.com/forkiss/lal/pkg/aac"
 
-	"github.com/q191201771/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/assert"
 )
 
 var goldenSh = []byte{

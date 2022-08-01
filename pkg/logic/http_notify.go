@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/nazahttp"
+	"github.com/forkiss/naza/pkg/nazahttp"
 )
 
 // TODO(chef): refactor 配置参数供外部传入

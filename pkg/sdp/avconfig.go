@@ -13,7 +13,7 @@ import (
 	"encoding/hex"
 	"strings"
 
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 
 	"github.com/forkiss/lal/pkg/base"
 )

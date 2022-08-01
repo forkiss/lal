@@ -13,7 +13,7 @@ import (
 
 	"github.com/forkiss/lal/pkg/rtprtcp"
 
-	"github.com/q191201771/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/assert"
 )
 
 func TestCompareSeq(t *testing.T) {

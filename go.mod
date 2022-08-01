@@ -2,7 +2,4 @@ module github.com/forkiss/lal
 
 go 1.18
 
-require (
-	github.com/forkiss/lal v0.30.1
-	github.com/q191201771/naza v0.30.3
-)
+require github.com/forkiss/naza v0.0.0-20220801102102-931a27825d3e

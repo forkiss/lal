@@ -14,12 +14,12 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 
 	"github.com/forkiss/lal/pkg/base"
 
-	"github.com/q191201771/naza/pkg/bele"
-	"github.com/q191201771/naza/pkg/connection"
+	"github.com/forkiss/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/connection"
 )
 
 // TODO chef: 没有进化成Pub Sub时的超时释放

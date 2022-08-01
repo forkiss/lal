@@ -12,8 +12,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/q191201771/naza/pkg/assert"
-	"github.com/q191201771/naza/pkg/fake"
+	"github.com/forkiss/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/fake"
 )
 
 //func TestWriteMessageHandler(t *testing.T) {

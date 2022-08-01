@@ -1,5 +1,2 @@
-github.com/forkiss/lal v0.30.1 h1:VYZnOUHShmrXfZpi69JpX6CSi/ZoH1yOZELa0l23QBE=
-github.com/forkiss/lal v0.30.1/go.mod h1:oBPQ+vNMI4GjXaUf1zg6xbZ9QfoLikEdqSOy0Kzdyo4=
-github.com/q191201771/naza v0.30.2/go.mod h1:n+dpJjQSh90PxBwxBNuifOwQttywvSIN5TkWSSYCeBk=
-github.com/q191201771/naza v0.30.3 h1:zK3cumtPY8Wj+HQpXNs2JendbGCw96qbsGosRez7oLo=
-github.com/q191201771/naza v0.30.3/go.mod h1:n+dpJjQSh90PxBwxBNuifOwQttywvSIN5TkWSSYCeBk=
+github.com/forkiss/naza v0.0.0-20220801102102-931a27825d3e h1:tcxUBHx4av4qIJnDsnZazorUgUIs/FpYTpvfysr051U=
+github.com/forkiss/naza v0.0.0-20220801102102-931a27825d3e/go.mod h1:ObtmXQkvfl0FNOKX/hRvwGidmd8VtIieoxtwBwf7Ymk=

@@ -8,7 +8,7 @@
 
 package rtmp
 
-import "github.com/q191201771/naza/pkg/nazalog"
+import "github.com/forkiss/naza/pkg/nazalog"
 
 // TODO chef 一些更专业的配置项，暂时只在该源码文件中配置，不提供外部配置接口
 

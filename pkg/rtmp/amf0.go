@@ -16,14 +16,14 @@ import (
 	"bytes"
 	"encoding/hex"
 	"fmt"
-	"github.com/q191201771/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/nazabytes"
 	"io"
 	"strings"
 
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 
-	"github.com/q191201771/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/bele"
 )
 
 const (

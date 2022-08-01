@@ -12,7 +12,7 @@ import (
 	"net"
 
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/connection"
+	"github.com/forkiss/naza/pkg/connection"
 )
 
 var tsHttpResponseHeader []byte

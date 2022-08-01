@@ -9,8 +9,8 @@
 package hls
 
 import (
-	"github.com/q191201771/naza/pkg/mock"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/mock"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 var (

@@ -9,8 +9,8 @@
 package base
 
 import (
-	"github.com/q191201771/naza/pkg/connection"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/connection"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 type IStatable interface {

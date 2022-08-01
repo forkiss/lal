@@ -19,9 +19,9 @@ import (
 
 	"github.com/forkiss/lal/pkg/base"
 
-	"github.com/q191201771/naza/pkg/nazahttp"
+	"github.com/forkiss/naza/pkg/nazahttp"
 
-	"github.com/q191201771/naza/pkg/connection"
+	"github.com/forkiss/naza/pkg/connection"
 )
 
 type PullSessionOption struct {

@@ -11,7 +11,7 @@ package main
 import (
 	"testing"
 
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 func TestStreamExist(t *testing.T) {

@@ -10,8 +10,8 @@ package rtmp
 
 import (
 	"bytes"
-	"github.com/q191201771/naza/pkg/nazabytes"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/nazalog"
 
 	"github.com/forkiss/lal/pkg/base"
 )

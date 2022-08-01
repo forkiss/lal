@@ -10,9 +10,9 @@ package aac
 
 import (
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 
-	"github.com/q191201771/naza/pkg/nazabits"
+	"github.com/forkiss/naza/pkg/nazabits"
 )
 
 // TODO(chef) 这个文件的部分内容可以考虑放到package base中

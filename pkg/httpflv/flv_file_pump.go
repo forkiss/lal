@@ -11,7 +11,7 @@ package httpflv
 import (
 	"time"
 
-	"github.com/q191201771/naza/pkg/mock"
+	"github.com/forkiss/naza/pkg/mock"
 )
 
 var Clock = mock.NewStdClock()

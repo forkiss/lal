@@ -8,7 +8,7 @@
 
 package base
 
-import "github.com/q191201771/naza/pkg/bele"
+import "github.com/forkiss/naza/pkg/bele"
 
 const (
 	// RtmpTypeIdAudio spec-rtmp_specification_1.0.pdf

@@ -13,15 +13,15 @@ import (
 	"net"
 	"sync"
 
-	"github.com/q191201771/naza/pkg/nazaatomic"
+	"github.com/forkiss/naza/pkg/nazaatomic"
 
 	"github.com/forkiss/lal/pkg/rtprtcp"
-	"github.com/q191201771/naza/pkg/nazabytes"
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/sdp"
-	"github.com/q191201771/naza/pkg/nazanet"
+	"github.com/forkiss/naza/pkg/nazanet"
 )
 
 // BaseOutSession out的含义是音视频由本端发送至对端

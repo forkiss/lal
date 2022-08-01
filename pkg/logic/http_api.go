@@ -10,12 +10,12 @@ package logic
 
 import (
 	"encoding/json"
-	"github.com/q191201771/naza/pkg/nazajson"
+	"github.com/forkiss/naza/pkg/nazajson"
 	"io/ioutil"
 	"net"
 	"net/http"
 
-	"github.com/q191201771/naza/pkg/nazahttp"
+	"github.com/forkiss/naza/pkg/nazahttp"
 
 	"github.com/forkiss/lal/pkg/base"
 )

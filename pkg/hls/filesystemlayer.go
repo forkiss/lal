@@ -11,7 +11,7 @@ package hls
 import (
 	"sync"
 
-	"github.com/q191201771/naza/pkg/filesystemlayer"
+	"github.com/forkiss/naza/pkg/filesystemlayer"
 )
 
 var (

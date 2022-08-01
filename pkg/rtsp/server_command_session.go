@@ -14,13 +14,13 @@ import (
 	"net"
 	"strings"
 
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 
-	"github.com/q191201771/naza/pkg/connection"
+	"github.com/forkiss/naza/pkg/connection"
 
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/sdp"
-	"github.com/q191201771/naza/pkg/nazahttp"
+	"github.com/forkiss/naza/pkg/nazahttp"
 )
 
 type IServerCommandSessionObserver interface {

@@ -13,11 +13,11 @@ import (
 
 	"github.com/forkiss/lal/pkg/base"
 
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 
-	"github.com/q191201771/naza/pkg/bele"
-	"github.com/q191201771/naza/pkg/nazabits"
-	"github.com/q191201771/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/nazabits"
+	"github.com/forkiss/naza/pkg/nazabytes"
 )
 
 func ParseSps(payload []byte, ctx *Context) error {

@@ -12,7 +12,7 @@ import (
 	"testing"
 
 	"github.com/forkiss/lal/pkg/hevc"
-	"github.com/q191201771/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/assert"
 )
 
 // http://ffmpeg.org/doxygen/trunk/hevc_8c_source.html

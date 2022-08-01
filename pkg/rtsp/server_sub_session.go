@@ -12,8 +12,8 @@ import (
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/rtprtcp"
 	"github.com/forkiss/lal/pkg/sdp"
-	"github.com/q191201771/naza/pkg/nazaerrors"
-	"github.com/q191201771/naza/pkg/nazanet"
+	"github.com/forkiss/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazanet"
 )
 
 type SubSession struct {

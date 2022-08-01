@@ -11,7 +11,7 @@ package h2645
 import (
 	"github.com/forkiss/lal/pkg/avc"
 	"github.com/forkiss/lal/pkg/hevc"
-	"github.com/q191201771/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/bele"
 )
 
 // TODO(chef): 逐渐将package avc, hevc迁移到package h2645，这个package处于开发阶段，如果内容不全，请使用package avc, hevc

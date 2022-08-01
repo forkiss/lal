@@ -15,7 +15,7 @@ import (
 	"github.com/forkiss/lal/pkg/base"
 	"strings"
 
-	"github.com/q191201771/naza/pkg/nazamd5"
+	"github.com/forkiss/naza/pkg/nazamd5"
 )
 
 // TODO chef: 考虑部分内容移入naza中

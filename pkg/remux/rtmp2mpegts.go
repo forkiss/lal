@@ -16,8 +16,8 @@ import (
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/hevc"
 	"github.com/forkiss/lal/pkg/mpegts"
-	"github.com/q191201771/naza/pkg/bele"
-	"github.com/q191201771/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/nazabytes"
 )
 
 const (

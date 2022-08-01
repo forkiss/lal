@@ -8,7 +8,7 @@
 
 package rtprtcp
 
-import "github.com/q191201771/naza/pkg/bele"
+import "github.com/forkiss/naza/pkg/bele"
 
 type Rr struct {
 	senderSsrc  uint32

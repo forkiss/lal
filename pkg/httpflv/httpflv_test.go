@@ -14,9 +14,9 @@ import (
 	"testing"
 
 	"github.com/forkiss/lal/pkg/httpflv"
-	"github.com/q191201771/naza/pkg/assert"
-	"github.com/q191201771/naza/pkg/mock"
-	"github.com/q191201771/naza/pkg/nazamd5"
+	"github.com/forkiss/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/mock"
+	"github.com/forkiss/naza/pkg/nazamd5"
 
 	"github.com/forkiss/lal/pkg/innertest"
 )

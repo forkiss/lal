@@ -12,7 +12,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/q191201771/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/nazabytes"
 
 	"github.com/forkiss/lal/pkg/base"
 )

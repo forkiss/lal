@@ -18,8 +18,8 @@ import (
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/hls"
 	"github.com/forkiss/lal/pkg/rtsp"
-	"github.com/q191201771/naza/pkg/nazajson"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazajson"
+	"github.com/forkiss/naza/pkg/nazalog"
 )
 
 const (

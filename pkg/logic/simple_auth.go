@@ -13,7 +13,7 @@ import (
 	"strings"
 
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/nazamd5"
+	"github.com/forkiss/naza/pkg/nazamd5"
 )
 
 func SimpleAuthCalcSecret(key string, streamName string) string {

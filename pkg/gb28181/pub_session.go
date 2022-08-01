@@ -10,7 +10,7 @@ package gb28181
 
 import (
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/nazanet"
+	"github.com/forkiss/naza/pkg/nazanet"
 	"net"
 	"sync"
 )

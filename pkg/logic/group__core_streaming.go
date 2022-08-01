@@ -12,7 +12,7 @@ import (
 	"net"
 
 	"github.com/forkiss/lal/pkg/rtmp"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 
 	"github.com/forkiss/lal/pkg/mpegts"
 
@@ -450,10 +450,10 @@ func (group *Group) feedRtpPacket(pkt rtprtcp.RtpPacket) {
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-func (group *Group) feedTsPackets(tsPackets []byte, frame *mpegts.Frame, boundary bool) {
+func (group *Group) feedTsPackets(packets []byte, frame *mpegts.Frame, boundary bool) {
 	// 注意，hls的处理放在前面，让hls先判断是否打开新的fragment并flush audio
 	if group.hlsMuxer != nil {
-		group.hlsMuxer.FeedMpegts(tsPackets, frame, boundary)
+		group.hlsMuxer.FeedMPEGts(packets, frame, boundary)
 	}
 
 	// # 遍历 httpts sub session
@@ -483,24 +483,24 @@ func (group *Group) feedTsPackets(tsPackets []byte, frame *mpegts.Frame, boundar
 		// ## 转发本次数据
 		if session.ShouldWaitBoundary {
 			if boundary {
-				session.Write(tsPackets)
+				session.Write(packets)
 
 				session.ShouldWaitBoundary = false
 			} else {
 				// 需要继续等
 			}
 		} else {
-			session.Write(tsPackets)
+			session.Write(packets)
 		}
 	} // for loop iterate httptsSubSessionSet
 
 	if group.recordMpegts != nil {
-		if err := group.recordMpegts.Write(tsPackets); err != nil {
+		if err := group.recordMpegts.Write(packets); err != nil {
 			Log.Errorf("[%s] record mpegts write error. err=%+v", group.UniqueKey, err)
 		}
 	}
 
-	group.httptsGopCache.Feed(tsPackets, boundary)
+	group.httptsGopCache.Feed(packets, boundary)
 }
 
 // ---------------------------------------------------------------------------------------------------------------------

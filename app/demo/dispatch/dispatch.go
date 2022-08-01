@@ -17,9 +17,9 @@ import (
 
 	"github.com/forkiss/lal/app/demo/dispatch/datamanager"
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/nazahttp"
-	"github.com/q191201771/naza/pkg/nazalog"
-	"github.com/q191201771/naza/pkg/unique"
+	"github.com/forkiss/naza/pkg/nazahttp"
+	"github.com/forkiss/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/unique"
 )
 
 //

@@ -17,7 +17,7 @@ import (
 	"github.com/forkiss/lal/pkg/remux"
 	"github.com/forkiss/lal/pkg/rtmp"
 	"github.com/forkiss/lal/pkg/rtsp"
-	"github.com/q191201771/naza/pkg/connection"
+	"github.com/forkiss/naza/pkg/connection"
 )
 
 // TODO(chef): 检查所有 interface是否以I开头 202207

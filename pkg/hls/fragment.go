@@ -9,7 +9,7 @@
 package hls
 
 import (
-	"github.com/q191201771/naza/pkg/filesystemlayer"
+	"github.com/forkiss/naza/pkg/filesystemlayer"
 )
 
 type Fragment struct {

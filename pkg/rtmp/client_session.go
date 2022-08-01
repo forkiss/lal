@@ -22,8 +22,8 @@ import (
 
 	"github.com/forkiss/lal/pkg/base"
 
-	"github.com/q191201771/naza/pkg/bele"
-	"github.com/q191201771/naza/pkg/connection"
+	"github.com/forkiss/naza/pkg/bele"
+	"github.com/forkiss/naza/pkg/connection"
 )
 
 // ClientSession rtmp 客户端类型连接的底层实现

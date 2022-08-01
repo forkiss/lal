@@ -18,16 +18,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/q191201771/naza/pkg/nazabytes"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/nazalog"
 
 	"github.com/forkiss/lal/pkg/httpts"
-	"github.com/q191201771/naza/pkg/filebatch"
+	"github.com/forkiss/naza/pkg/filebatch"
 
 	"github.com/forkiss/lal/pkg/hls"
-	"github.com/q191201771/naza/pkg/mock"
+	"github.com/forkiss/naza/pkg/mock"
 
-	"github.com/q191201771/naza/pkg/nazahttp"
+	"github.com/forkiss/naza/pkg/nazahttp"
 
 	"github.com/forkiss/lal/pkg/rtprtcp"
 	"github.com/forkiss/lal/pkg/rtsp"
@@ -37,13 +37,13 @@ import (
 
 	"github.com/forkiss/lal/pkg/base"
 
-	"github.com/q191201771/naza/pkg/nazamd5"
+	"github.com/forkiss/naza/pkg/nazamd5"
 
 	"github.com/forkiss/lal/pkg/httpflv"
 	"github.com/forkiss/lal/pkg/logic"
 	"github.com/forkiss/lal/pkg/rtmp"
-	"github.com/q191201771/naza/pkg/assert"
-	"github.com/q191201771/naza/pkg/nazaatomic"
+	"github.com/forkiss/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/nazaatomic"
 )
 
 // 开启了一个lalserver

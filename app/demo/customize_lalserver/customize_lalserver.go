@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"github.com/forkiss/lal/pkg/aac"
 	"github.com/forkiss/lal/pkg/avc"
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 	"io/ioutil"
 	"os"
 	"time"
@@ -21,7 +21,7 @@ import (
 	"github.com/forkiss/lal/pkg/base"
 
 	"github.com/forkiss/lal/pkg/logic"
-	"github.com/q191201771/naza/pkg/bininfo"
+	"github.com/forkiss/naza/pkg/bininfo"
 )
 
 // 文档见 <lalserver二次开发 - pub接入自定义流>

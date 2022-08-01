@@ -10,7 +10,7 @@ package rtsp
 
 import (
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/circularqueue"
+	"github.com/forkiss/naza/pkg/circularqueue"
 )
 
 // 处理音频和视频的时间戳：

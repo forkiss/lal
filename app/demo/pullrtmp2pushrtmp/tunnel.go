@@ -17,9 +17,9 @@ import (
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/remux"
 	"github.com/forkiss/lal/pkg/rtmp"
-	"github.com/q191201771/naza/pkg/nazabytes"
-	"github.com/q191201771/naza/pkg/nazalog"
-	"github.com/q191201771/naza/pkg/unique"
+	"github.com/forkiss/naza/pkg/nazabytes"
+	"github.com/forkiss/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/unique"
 )
 
 // 注意，当前的策略是，当推流有多个地址时，任意一个失败就会退出整个任务

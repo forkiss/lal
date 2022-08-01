@@ -14,7 +14,7 @@ import (
 	"strconv"
 
 	"github.com/forkiss/lal/pkg/base"
-	"github.com/q191201771/naza/pkg/nazaerrors"
+	"github.com/forkiss/naza/pkg/nazaerrors"
 )
 
 // writeM3u8File

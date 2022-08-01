@@ -12,7 +12,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/q191201771/naza/pkg/connection"
+	"github.com/forkiss/naza/pkg/connection"
 )
 
 type BasicHttpSubSession struct {

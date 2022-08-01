@@ -16,7 +16,7 @@ import (
 
 	"github.com/forkiss/lal/pkg/base"
 	"github.com/forkiss/lal/pkg/remux"
-	"github.com/q191201771/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/assert"
 )
 
 func TestDummyAudioFilter(t *testing.T) {
@@ -131,7 +131,7 @@ func helperUnpackRtmpMsg(logstr string) base.RtmpMsg {
 	remux.Log.Assert(nil, err)
 
 	return base.RtmpMsg{
-		Header: header,
+		Header:  header,
 		Payload: payload,
 	}
 }

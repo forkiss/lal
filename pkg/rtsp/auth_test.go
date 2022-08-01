@@ -13,7 +13,7 @@ import (
 
 	"github.com/forkiss/lal/pkg/rtsp"
 
-	"github.com/q191201771/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/assert"
 )
 
 func TestGetRtspFirstAuth(t *testing.T) {

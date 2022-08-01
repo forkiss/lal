@@ -12,14 +12,15 @@ import (
 	"flag"
 	"fmt"
 	"net/http"
+	_ "net/http/pprof"
 	"os"
 	"path/filepath"
 	"sync"
 	"time"
 
-	"github.com/q191201771/naza/pkg/nazalog"
+	"github.com/forkiss/naza/pkg/nazalog"
 
-	"github.com/q191201771/naza/pkg/defertaskthread"
+	"github.com/forkiss/naza/pkg/defertaskthread"
 
 	"github.com/forkiss/lal/pkg/hls"
 
@@ -28,8 +29,6 @@ import (
 	"github.com/forkiss/lal/pkg/httpts"
 
 	"github.com/forkiss/lal/pkg/rtsp"
-
-	_ "net/http/pprof"
 
 	"github.com/forkiss/lal/pkg/httpflv"
 	"github.com/forkiss/lal/pkg/rtmp"

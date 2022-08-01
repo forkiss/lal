@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/q191201771/naza/pkg/bininfo"
+	"github.com/forkiss/naza/pkg/bininfo"
 )
 
 // base包提供被其他多个package依赖的基础内容，自身不依赖任何package

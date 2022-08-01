@@ -18,8 +18,8 @@ import (
 	"github.com/forkiss/lal/pkg/base"
 
 	. "github.com/forkiss/lal/pkg/rtmp"
-	"github.com/q191201771/naza/pkg/assert"
-	"github.com/q191201771/naza/pkg/fake"
+	"github.com/forkiss/naza/pkg/assert"
+	"github.com/forkiss/naza/pkg/fake"
 )
 
 func TestAmf0_WriteNumber_ReadNumber(t *testing.T) {
